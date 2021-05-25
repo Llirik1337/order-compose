@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   server:
-    build: git@github.com:Llirik1337/orders-backend.git#develop
+    build: https://github.com/Llirik1337/orders-backend.git#develop
     environment:
       - DATABASE_URL=mongodb://mongo:27017/bstu-orders
       - SERVER_PORT=3000
@@ -26,7 +26,7 @@ services:
       command: mongod # --quiet
   client:
     build: 
-      context: git@gitlab.com:altyn.stanislav/bstuorders.git#master
+      context: https://gitlab.com/altyn.stanislav/bstuorders.git#master
       args:
         - AUTH_URL=http://localhost:3000
         - STORE_URL=http://localhost:3000/graphql
