@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   server:
-    build: https://github.com/Llirik1337/orders-backend.git#develop
+    build: https://github.com/Llirik1337/orders-backend.git#master
     environment:
       - DATABASE_URL=mongodb://mongo:27017/bstu-orders
       - SERVER_PORT=3000
